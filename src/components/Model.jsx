@@ -49,6 +49,7 @@ function ThreeScene() {
       model.position.set(0.4, -0.8, 0);
 
       scene.add(model);
+      console.log("Animations:", gltf.animations);
 
       if (gltf.animations.length > 0) {
         mixer = new THREE.AnimationMixer(model);
