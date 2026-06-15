@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+//import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 function ThreeScene() {
   const mountRef = useRef();
@@ -28,8 +28,8 @@ function ThreeScene() {
 
     container.appendChild(renderer.domElement);
 
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
+    //const controls = new OrbitControls(camera, renderer.domElement);
+    //controls.enableDamping = true;
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 3);
     scene.add(ambientLight);
@@ -46,7 +46,7 @@ function ThreeScene() {
       const model = gltf.scene;
 
       model.scale.set(0.5, 0.5, 0.5);
-      model.position.set(0.4, -0.8, 0);
+      model.position.set(0.4, 0.4, 0);
 
       scene.add(model);
       console.log("Animations:", gltf.animations);
@@ -64,7 +64,7 @@ function ThreeScene() {
       requestAnimationFrame(animate);
       const delta = clock.getDelta();
       if (mixer) mixer.update(delta);
-      controls.update();
+      //controls.update();
       renderer.render(scene, camera);
     }
 
