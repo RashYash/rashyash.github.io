@@ -45,7 +45,7 @@ function ThreeScene() {
     loader.load(import.meta.env.BASE_URL + "scene.glb", (gltf) => {
       const model = gltf.scene;
 
-      model.scale.set(0.5, 0.5, 0.5);
+      model.scale.set(0.44, 0.44, 0.44);
       model.position.set(0.4, 0.4, 0);
 
       scene.add(model);

@@ -1,18 +1,19 @@
 import "./../styles/LandingPage.css";
 import ThreeScene from "../components/Model";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
     <div className="container">
       <nav className="navbar">
         <div className="logo">RASHYASH</div>
-
+        
         <div className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Skills</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/skills">Skills</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/contact">Contact</Link>
         </div>
 
         <button className="cv-btn">Download CV</button>
@@ -34,7 +35,9 @@ function LandingPage() {
           </div>
 
           <div className="buttons">
-            <button className="start-btn">View Projects</button>
+            <Link to="/projects">
+              <button className="start-btn">View Projects</button>
+            </Link>
             <button className="contact-btn">Contact Me</button>
           </div>
         </div>
