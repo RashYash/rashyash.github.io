@@ -1,7 +1,27 @@
 import "./../styles/Projects.css";
 import ProjectsBackground from "../components/ProjectsBackground";
+import { useState } from "react";
+import projectsData from "../data/projects.json";
 
 function Projects() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const categories = [
+    "All",
+    "Web",
+    "App",
+    "UI/UX",
+    "Logo Design",
+    "WordPress",
+    "Video Editing",
+    "3D Visualization",
+  ];
+
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projectsData
+      : projectsData.filter((project) => project.category === selectedCategory);
+
   return (
     <div className="projects-page">
       <div className="three-background">
@@ -12,72 +32,73 @@ function Projects() {
         <div className="projects-header">
           <h1>My Projects</h1>
 
-          <p>Explore some of my latest web, AI and 3D development projects.</p>
+          <p>
+            Explore my latest Web Development, MERN Stack, Mobile App, UI/UX
+            Design, Video Editing and 3D Visualization projects.
+          </p>
+        </div>
+
+        <div className="category-filter">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={
+                selectedCategory === category
+                  ? "category-btn active"
+                  : "category-btn"
+              }
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
         </div>
 
         <div className="projects-grid">
-          <div className="project-card">
-            <h3>Tax Prediction System</h3>
+          {filteredProjects.map((project, index) => (
+            <div className="project-card" key={index}>
+              {project.video ? (
+                <video
+                  src={project.video}
+                  className="project-image"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
+              )}
 
-            <p>
-              MERN stack application with MongoDB integration and tax prediction
-              features.
-            </p>
+              <h3>{project.title}</h3>
 
-            <div className="project-tags">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>MongoDB</span>
+              <p>{project.description}</p>
+
+              <div className="project-tags">
+                {project.tags.map((tag, i) => (
+                  <span key={i}>{tag}</span>
+                ))}
+              </div>
+
+              <div className="project-buttons">
+                {project.viewLink && (
+                  <a href={project.viewLink} target="_blank" rel="noreferrer">
+                    <button className="demo-btn">View Project</button>
+                  </a>
+                )}
+
+                {project.codeLink && (
+                  <a href={project.codeLink} target="_blank" rel="noreferrer">
+                    <button className="github-btn">GitHub</button>
+                  </a>
+                )}
+              </div>
             </div>
-
-            <div className="project-buttons">
-              <button className="demo-btn">Live Demo</button>
-
-              <button className="github-btn">GitHub</button>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <h3>Smart Campus Navigator</h3>
-
-            <p>
-              Interactive campus navigation system using Leaflet and routing
-              algorithms.
-            </p>
-
-            <div className="project-tags">
-              <span>JavaScript</span>
-              <span>Leaflet</span>
-              <span>Routing</span>
-            </div>
-
-            <div className="project-buttons">
-              <button className="demo-btn">Live Demo</button>
-
-              <button className="github-btn">GitHub</button>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <h3>AI Emotion Detection</h3>
-
-            <p>
-              Facial emotion recognition system for mental health monitoring and
-              support.
-            </p>
-
-            <div className="project-tags">
-              <span>Python</span>
-              <span>AI</span>
-              <span>OpenCV</span>
-            </div>
-
-            <div className="project-buttons">
-              <button className="demo-btn">Live Demo</button>
-
-              <button className="github-btn">GitHub</button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

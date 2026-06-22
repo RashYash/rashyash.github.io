@@ -1,0 +1,163 @@
+[
+  {
+    "title": "Automated Land Tax Management System",
+    "description": "A MERN Stack solution built for the Land Commissioner’s Department, Western Province, Sri Lanka. Features include automated tax notifications, admin dashboards, real-time data handling, and predictive analytics.",
+    "tags": ["MongoDB", "Express", "React", "Node.js", "Machine Learning"],
+    "color": "border-primary/50",
+    "gradient": "from-primary/10 to-transparent",
+    "category": "Web",
+    "image": "/projects/landtax.png",
+    "viewLink": "https://landtax-demo.com",
+    "codeLink": "https://github.com/username/land-tax-system"
+  },
+  {
+    "title": "Traintimely",
+    "description": "An intuitive train scheduling system built with PHP and MySQL. Enables users to view real-time train schedules and book tickets seamlessly. Features responsive design and efficient database management.",
+    "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    "color": "border-secondary/50",
+    "gradient": "from-secondary/10 to-transparent",
+    "category": "Web",
+    "image": "/projects/train.png",
+    "viewLink": "https://traintimely-demo.com",
+    "codeLink": "https://github.com/RashYash/TrainTimely.git"
+  },
+  {
+    "title": "PaletteVista",
+    "description": "A modern digital art gallery web application that showcases my painting collection in an interactive online environment. Built with React, Tailwind CSS, and Framer Motion, it offers a smooth, responsive experience and plans for future e-commerce enhancements.",
+    "tags": ["React", "Tailwind CSS", "Framer Motion", "Responsive Design"],
+    "color": "border-accent/50",
+    "gradient": "from-accent/10 to-transparent",
+    "category": "Web",
+    "image": "/projects/art.png",
+    "viewLink": "https://palette-vista.vercel.app/",
+    "codeLink": "https://github.com/RashYash/PaletteVista.git"
+  },
+  {
+    "title": "Tuition Class Management App",
+    "description": "A Flutter-based mobile application for managing tuition classes with Admin and Teacher roles. Features include student registration, attendance tracking, payment management, guardian notifications, and resource sharing for students.",
+    "tags": ["Flutter", "Dart", "SQLite"],
+    "color": "border-green-500/50",
+    "gradient": "from-green-100 to-transparent",
+    "category": "App",
+    "image": "/projects/tution.png",
+    "viewLink": "https://play.google.com/store/apps/details?id=tuitionapp",
+    "codeLink": "https://github.com/username/tuition-app"
+  },
+  {
+    "title": "Online Bookshop",
+    "description": "A full-stack web application with a sleek glassmorphism UI for browsing, filtering, and purchasing books. Includes user authentication, cart management, and Google API integration for enhanced search functionality.",
+    "tags": [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Google API"
+    ],
+    "color": "border-indigo-500/50",
+    "gradient": "from-indigo-100 to-transparent",
+    "category": "Web",
+    "image": "/projects/bookshop.jpg",
+    "viewLink": "https://bookshop-demo.com",
+    "codeLink": "https://github.com/RashYash/Yarash_Online_Bookshop.git"
+  },
+  {
+    "title": "Pet Care Website",
+    "description": "A web application built with HTML, CSS, JavaScript, PHP, and MySQL to improve accessibility and efficiency in pet care services. Focused on intuitive navigation, interactive features, and optimized performance.",
+    "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    "color": "border-secondary/50",
+    "gradient": "from-secondary/10 to-transparent",
+    "category": "Web",
+    "image": "/projects/dog.png",
+    "viewLink": "https://petcare-demo.com",
+    "codeLink": "https://github.com/RashYash/Pet-Care.git"
+  },
+  {
+    "title": "Protocol 404 Logo Design",
+    "description": "Three bold and modern logo concepts for Protocol 404, focusing on uniqueness and a youthful appeal. Dark azure backgrounds give a confident look, while gold logos add a royal and premium touch.",
+    "tags": ["Canva", "Branding", "Logo Design", "Visual Identity"],
+    "color": "border-accent/50",
+    "gradient": "from-accent/10 to-transparent",
+    "category": "Logo Design",
+    "image": "/projects/404.png",
+    "viewLink": "https://www.canva.com/design/DAG1GBCeDXU/przyQcNXs_lD_KiCNkEUsw/edit?utm_content=DAG1GBCeDXU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    "codeLink": "https://github.com/username/404-logo"
+  },
+  {
+    "title": "ECL Energy Logo Design",
+    "description": "A professional logo design created for ECL Energy, representing renewable energy, hydropower, and solar concepts with a modern touch using green, yellow, and sky blue color themes.",
+    "tags": ["Canva", "Branding", "Logo Design", "Visual Identity"],
+    "color": "border-green-500/50",
+    "gradient": "from-green-100 to-transparent",
+    "category": "Logo Design",
+    "image": "/projects/ecl.png",
+    "viewLink": "https://www.canva.com/design/DAG1GBCeDXU/przyQcNXs_lD_KiCNkEUsw/edit?utm_content=DAG1GBCeDXU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    "codeLink": "https://github.com/username/ecl-energy-logo"
+  },
+  {
+    "title": "Faculty of Computing Website",
+    "description": "Implemented the Faculty of Computing website as part of the campus development team using WordPress and Elementor Pro.",
+    "tags": ["WordPress", "PHP", "Elementor Pro", "Responsive Design"],
+    "color": "border-primary/50",
+    "gradient": "from-primary/10 to-transparent",
+    "category": "WordPress",
+    "image": "/projects/wordpress.png",
+    "viewLink": "https://computingfacultywebsite.com",
+    "codeLink": "https://github.com/username/campus-website"
+  },
+  {
+    "title": "Personal Logo Design for Future Business Product",
+    "description": "A personal logo design created for my own business product, representing my brand identity with modern and visually appealing elements.",
+    "tags": ["Canva", "Branding", "Logo Design", "Visual Identity"],
+    "color": "border-green-500/50",
+    "gradient": "from-green-100 to-transparent",
+    "category": "Logo Design",
+    "image": "/projects/yarash.png",
+    "viewLink": "https://www.canva.com/design/DAG1GBCeDXU/przyQcNXs_lD_KiCNkEUsw/edit?utm_content=DAG1GBCeDXU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    "codeLink": "https://github.com/username/personal-logo"
+  },
+  {
+    "title": "Logo Design for Future Travel Website 'Momento'",
+    "description": "A personal logo created for my traveling memories website, Momento, representing adventure, exploration, and memorable experiences.",
+    "tags": ["Canva", "Branding", "Logo Design", "Visual Identity"],
+    "color": "border-blue-500/50",
+    "gradient": "from-blue-100 to-transparent",
+    "category": "Logo Design",
+    "image": "/projects/travel.png",
+    "viewLink": "https://www.canva.com/design/DAG1GBCeDXU/przyQcNXs_lD_KiCNkEUsw/edit?utm_content=DAG1GBCeDXU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    "codeLink": "https://github.com/username/momento-logo"
+  },
+  {
+    "title": "Educational YouTube Video Editing",
+    "description": "Creating and editing educational YouTube lecture videos and social media content for accounting subjects using Canva with engaging transitions and text animations.",
+    "tags": ["Canva", "Video Editing", "Content Creation"],
+    "color": "border-red-400/50",
+    "gradient": "from-red-100 to-transparent",
+    "category": "Video Editing",
+    "video": "/projects/leverage.mp4",
+    "viewLink": "https://www.youtube.com/@AccountingwithSagara",
+    "codeLink": ""
+  },
+  {
+    "title": "3D Classroom Visualization",
+    "description": "My first experience with 3D modeling and visualization using Blender. Designed a realistic classroom environment with desks, chairs, and lighting.",
+    "tags": ["Blender", "3D Modeling", "Architectural Visualization"],
+    "color": "border-purple-500/50",
+    "gradient": "from-purple-100 to-transparent",
+    "category": "3D Visualization",
+    "video": "/projects/class1.mp4",
+    "viewLink": "https://www.linkedin.com/posts/yasara-siriwardhana-77156334a_blender3d-3dmodeling-architecturalvisualization-activity-7298443373185560576-K3XO",
+    "codeLink": ""
+  },
+  {
+    "title": "UI/UX Design – Tuition Class Management App",
+    "description": "A complete UI/UX design created in Figma for the Tuition Class Management mobile app. Focused on smooth navigation, role-based accessibility, and an engaging modern layout for Admin and Teacher dashboards. Designed with a clean, user-friendly interface to enhance usability and system efficiency.",
+    "tags": ["Figma", "UI/UX Design", "Mobile App Design", "Prototyping"],
+    "color": "border-pink-500/50",
+    "gradient": "from-pink-100 to-transparent",
+    "category": "UI/UX",
+    "image": "/projects/uiux1.png",
+    "viewLink": "https://www.figma.com/design/R1nPmhPmabnG7bf04Iff6z/Untitled?node-id=8-2&m=dev&t=89Xux4Ta4espCjAW-1",
+    "codeLink": ""
+  }
+]

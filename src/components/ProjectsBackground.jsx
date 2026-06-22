@@ -37,7 +37,9 @@ function ProjectsBackground() {
     scene.add(pointLight);
 
     let model;
+    let mixer;
 
+    const clock = new THREE.Clock();
     const loader = new GLTFLoader();
 
     loader.load(
@@ -45,8 +47,33 @@ function ProjectsBackground() {
 
       (gltf) => {
         model = gltf.scene;
-        model.scale.set(1.5, 1.5, 1.5);
+        let scale = 1.5;
+
+        if (window.innerWidth <= 480) {
+          scale = 0.8;
+        } else if (window.innerWidth <= 768) {
+          scale = 1.1;
+        } else if (window.innerWidth <= 1024) {
+          scale = 1.3;
+        }
+
+        model.scale.set(scale, scale, scale);
         scene.add(model);
+
+        console.log("Animations:", gltf.animations);
+
+        if (gltf.animations.length > 0) {
+          mixer = new THREE.AnimationMixer(model);
+          const action = mixer.clipAction(gltf.animations[0]);
+          action.play();
+          console.log("Animation Started:", gltf.animations[0].name);
+        }
+      },
+
+      undefined,
+
+      (error) => {
+        console.error("GLB Loading Error:", error);
       },
     );
 
@@ -60,26 +87,47 @@ function ProjectsBackground() {
 
     window.addEventListener("mousemove", handleMouseMove);
 
-    function animate() {
+    const animate = () => {
       requestAnimationFrame(animate);
+      const delta = clock.getDelta();
+
+      if (mixer) {
+        mixer.update(delta);
+      }
 
       if (model) {
-        model.rotation.y += 0.003;
-        model.rotation.x += (mouseY * 0.3 - model.rotation.x) * 0.05;
-        model.rotation.y += (mouseX * 0.3 - model.rotation.y) * 0.01;
+        model.rotation.y += 0.002;
+        model.rotation.x += (mouseY * 0.25 - model.rotation.x) * 0.05;
+        model.rotation.y += (mouseX * 0.2 - model.rotation.y) * 0.01;
       }
-      //controls.update();
+
       renderer.render(scene, camera);
-    }
+    };
 
     animate();
 
     const handleResize = () => {
       const width = container.clientWidth;
       const height = container.clientHeight;
-      renderer.setSize(width, height);
+
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
+
+      renderer.setSize(width, height);
+
+      if (model) {
+        let scale = 1.5;
+
+        if (window.innerWidth <= 480) {
+          scale = 0.8;
+        } else if (window.innerWidth <= 768) {
+          scale = 1.1;
+        } else if (window.innerWidth <= 1024) {
+          scale = 1.3;
+        }
+
+        model.scale.set(scale, scale, scale);
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -87,10 +135,11 @@ function ProjectsBackground() {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("resize", handleResize);
-      if (renderer.domElement && container) {
+      renderer.dispose();
+
+      if (container && renderer.domElement.parentNode) {
         container.removeChild(renderer.domElement);
       }
-      renderer.dispose();
     };
   }, []);
 
