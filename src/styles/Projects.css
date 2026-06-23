@@ -124,9 +124,8 @@
   padding: 25px;
 
   border-radius: 25px;
-
-  backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 
   background: rgba(255, 255, 255, 0.05);
 
